@@ -37,10 +37,16 @@ namespace AOC2018
             switch(day)
             {
                 default:
+                    return Task.CompletedTask;
                 case 1:
                     return Task.WhenAll(
                         Task.Run(() => Day1.Run()),
                         Task.Run(() => Day1.RunPartTwo())
+                    );
+                case 2:
+                    return Task.WhenAll(
+                        Task.Run(() => Day2.Run()),
+                        Task.Run(() => Day2.RunPartTwo())
                     );
             }
         }
